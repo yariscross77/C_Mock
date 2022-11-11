@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap.css">
+
+  <style>
+    .nameform>div {
+      width: 40%;
+    }
+
+    .nameform>label {
+      width: auto;
+    }
+
+    .tableSize>tr>th {
+      width: 25%;
+    }
+
+    .tableSize>tr>td {
+      width: 100%;
+    }
+  </style>
+
+  <title>購入申し込み</title>
+</head>
+
+<body onload="start();">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+       <a class="navbar-brand" href="top.html">さんすうらんど・りさいくる</a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+          aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+             <li class="nav-item">
+                <a class="nav-link" href="top.html">トップ</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="kifu_m.html">寄付する</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="konyu_m.html">買う</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="help.html">ヘルプ</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="お問い合わせ.html">お問い合わせ</a>
+             </li>
+          </ul>
+       </div>
+    </div>
+ </nav>
+
+  <main class="container mt-5 center-block">
+    <h2 class="mb-5">購入申し込み</h2>
+    <form method="post" action="konyu_k.html">
+      <table class="table">
+        <tbody class="tableSize">
+          <tr>
+            <th class="align-middle">児童氏名</th>
+            <td class="row align-middle nameform">
+              <label class="form-label my-auto text-end">姓</label>
+              <div>
+                <input type="text" class="form-control" placeholder="山田">
+              </div>
+              <label class="form-label my-auto text-end">名</label>
+              <div>
+                <input type="text" class="form-control" placeholder="太郎">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th class="align-middle">保護者氏名</th>
+            <td class="row align-middle nameform">
+              <label class="form-label my-auto text-end">姓</label>
+              <div>
+                <input type="text" class="form-control" placeholder="山田">
+              </div>
+              <label class="form-label my-auto text-end">名</label>
+              <div>
+                <input type="text" class="form-control" placeholder="一郎">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th class="align-middle">郵便番号</th>
+            <td>
+              <input type="tel" class="form-control" placeholder="123-4567" pattern="\d{3}-?\d{4}">
+          </tr>
+          <tr>
+            <th class="align-middle">住所</th>
+            <td>
+              <input type="text" class="form-control">
+
+            </td>
+          </tr>
+          <tr>
+            <th class="align-middle">電話番号</th>
+            <td>
+              <input type="tel" class="form-control" placeholder="080-1234-5678" pattern="\d{2,4}-\d{2,4}-\d{3,4}">
+            </td>
+          </tr>
+          <tr>
+            <th class="align-middle">メールアドレス</th>
+            <td>
+              <input type="email" class="form-control" placeholder="yamada@taro.com">
+            </td>
+          </tr>
+          <tr>
+            <th class="align-middle">決済方法</th>
+            <td>
+              <div class="form-check">
+                <label>現金（入学後集金致します）</label>
+              </div>
+              <!--<div class="form-check">
+                <input class="form-check-input" type="radio" name="payment" id="card" value="card" onclick="pay();">
+                <label class="form-check-label" for="optionsRadios2" _msthash="4179994"
+                  _msttexthash="259949144">クレジットカード</label>
+              </div>
+
+              <div class="row gy-3" id="card_info">
+                <div class="col-md-6">
+                  <label for="cc-name" class="form-label">カードの名義</label>
+                  <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                  <small class="text-muted">カード上に表示されているフルネーム</small>
+                  <div class="invalid-feedback">
+                    カードの名義を入力してください
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="cc-number" class="form-label">クレジットカード番号</label>
+                  <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                  <div class="invalid-feedback">
+                    クレジットカード番号を入力してください
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="cc-expiration" class="form-label">有効期限</label>
+                  <input type="month" class="form-control" id="cc-expiration" placeholder="" required>
+                  <div class="invalid-feedback">
+                    有効期限を入力してください
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="cc-cvv" class="form-label">CVV</label>
+                  <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                  <div class="invalid-feedback">
+                    セキュリティコードを入力してください
+                  </div>
+                </div>
+              </div>-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="text-end mt-4">
+        <input type="submit" class="btn btn-primary btn-lg" value="確認画面へ">
+      </div>
+    </form>
+  </main>
+
+  <div id="output"></div>
+
+  <br>
+  <footer class="border-top footer text-center">
+
+    <div class="container">
+
+      ©こぴーらいと
+
+    </div>
+
+  </footer>
+
+  <!--<script src="js/bootstrap.bundle.min.js"></script>
+
+  <script type="text/javascript" language="javascript">
+    function pay() {
+      cash = document.getElementById('cash');
+      card = document.getElementById('card');
+
+      cc_name = document.getElementById('cc-name');
+      cc_number = document.getElementById('cc-number');
+      cc_expiration = document.getElementById('cc-expiration');
+      cc_cvv = document.getElementById('cc-cvv');
+
+
+      if (cash.checked == true) {
+        document.getElementById('card_info').style.display = "none";
+
+        cc_name.required = false;
+        cc_number.required = false;
+        cc_expiration.required = false;
+        cc_cvv.required = false;
+      } else if (card.checked == true) {
+        document.getElementById('card_info').style.display = ""
+
+        cc_name.required = true;
+        cc_number.required = true;
+        cc_expiration.required = true;
+        cc_cvv.required = true;
+      }
+
+      window.onload = pay;
+    }
+
+    function start() {
+      document.getElementById('card_info').style.display = "none";
+
+      cc_name = document.getElementById('cc-name');
+      cc_number = document.getElementById('cc-number');
+      cc_expiration = document.getElementById('cc-expiration');
+      cc_cvv = document.getElementById('cc-cvv');
+
+      cc_name.required = false;
+      cc_number.required = false;
+      cc_expiration.required = false;
+      cc_cvv.required = false;
+    }
+  </script>-->
+
+</body>
+
+</html>

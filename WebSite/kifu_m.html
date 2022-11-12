@@ -26,20 +26,27 @@
       width: 100%;
     }
 
-    img {
-      width: 45%;
-      margin-right: 10px;
-      border: 1px solid #000;
+    .imgInput {
+      border-style: dotted;
+      border-color: lightgray;
+      padding: 10px;
+      height: 30vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    #img1 input {
-      margin-top: 10px;
-      margin-bottom: 10px;
+    .imgInput>img {
+      height: 100%;
+      width: auto;
     }
 
-    #img2 input {
-      margin-top: 10px;
-      margin-bottom: 10px;
+    .buttonColor {
+      background-color: gainsboro;
+    }
+
+    .buttonColor:hover {
+      background-color: silver;
     }
   </style>
 
@@ -49,36 +56,36 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-       <a class="navbar-brand" href="top.html">さんすうらんど・りさいくる</a>
-       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
-          aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-       </button>
-       <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav me-auto">
-             <li class="nav-item">
-                <a class="nav-link" href="top.html">トップ</a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link" href="kifu_m.html">寄付する</a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link" href="konyu_m.html">買う</a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link" href="help.html">ヘルプ</a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link" href="お問い合わせ.html">お問い合わせ</a>
-             </li>
-          </ul>
-       </div>
+      <a class="navbar-brand" href="top.html">さんすうらんど・りさいくる</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="top.html">トップ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kifu_m.html">寄付する</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="konyu_m.html">買う</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="help.html">ヘルプ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="お問い合わせ.html">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
     </div>
- </nav>
+  </nav>
 
   <main class="container mt-5 center-block" method="post">
     <h2 class="mb-5">寄付申し込み</h2>
-    <form method="post" action="kifu_k.html">
+    <form method="post" action="kifu_k.html" enctype="multipart/form-data">
       <table class="table">
         <tbody class="tableSize">
           <tr>
@@ -86,11 +93,11 @@
             <td class="row align-middle nameform">
               <label class="form-label my-auto text-end">姓</label>
               <div>
-                <input type="text" class="form-control" placeholder="山田">
+                <input type="text" class="form-control" placeholder="山田" name="child_family_name">
               </div>
               <label class="form-label my-auto text-end">名</label>
               <div>
-                <input type="text" class="form-control" placeholder="太郎">
+                <input type="text" class="form-control" placeholder="太郎" name="child_first_name">
               </div>
             </td>
           </tr>
@@ -99,60 +106,66 @@
             <td class="row align-middle nameform">
               <label class="form-label my-auto text-end">姓</label>
               <div>
-                <input type="text" class="form-control" placeholder="山田">
+                <input type="text" class="form-control" placeholder="山田" name="parent_family_name">
               </div>
               <label class="form-label my-auto text-end">名</label>
               <div>
-                <input type="text" class="form-control" placeholder="一郎">
+                <input type="text" class="form-control" placeholder="一郎" name="parent_first_name">
               </div>
             </td>
           </tr>
           <tr>
             <th class="align-middle">郵便番号</th>
             <td>
-              <input type="tel" class="form-control" placeholder="123-4567" pattern="\d{3}-?\d{4}">
+              <input type="tel" class="form-control" placeholder="123-4567" pattern="\d{3}-?\d{4}" name="post_code">
           </tr>
           <tr>
             <th class="align-middle">住所</th>
             <td>
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" name="phone_number">
             </td>
           </tr>
           <tr>
             <th class="align-middle">電話番号</th>
             <td>
-              <input type="tel" class="form-control" placeholder="080-1234-5678" pattern="\d{2,4}-\d{2,4}-\d{3,4}">
+              <input type="tel" class="form-control" placeholder="080-1234-5678" pattern="\d{2,4}-\d{2,4}-\d{3,4}"
+                name="address">
             </td>
           </tr>
           <tr>
             <th class="align-middle">メールアドレス</th>
             <td>
-              <input type="email" class="form-control" placeholder="yamada.taro@gmail.com">
+              <input type="email" class="form-control" placeholder="yamada.taro@gmail.com" name="email_address">
             </td>
           </tr>
           <tr>
-            <th class="align-middle">寄付する算数セットの外見</th>
+            <th class="align-middle">算数ランド外見の写真</th>
             <td>
-              <div id="img1">
-                <!--<input type="file" class="form-control" accept="image/*" onchange="loop(event,'item1');" multiple> 複数選択-->
-                <input type="file" class="form-control" name="file[]" accept="image/*" onchange="imgUpload1(event);">
-                <!--<div id="preview-item1"></div> -->
-                <div id="preview1"></div>
+              <div class="input-group mb-3">
+                <input type="file" class="form-control" id="fileInput1" style="width: 80%"
+                  oninput="inputChange(event,1)" name="file_input_1">
+                <button type="button" class="form-control buttonColor" onclick="inputCancel(1)">取消</button>
+              </div>
+              <div class="imgInput" id="appearance_img">
+                <img style="display:none" src="">
+                <p>画像を選択してください</p>
               </div>
             </td>
           </tr>
-
-
           <tr>
-            <th class="align-middle">寄付する算数セットの中身</th>
+            <th class="align-middle">算数ランドの中身の写真</th>
             <td>
-              <div id="img2">
-                <input type="file" class="form-control" name="file[]" accept="image/*" onchange="imgUpload2(event);">
-                <div id="preview2"></div>
+              <div class="input-group mb-3">
+                <input type="file" class="form-control" id="fileInput2" style="width: 80%"
+                  oninput="inputChange(event,2)" name="file_input_2">
+                <button type="button" class="form-control buttonColor" onclick="inputCancel(2)">取消</button>
+              </div>
+              <div class="imgInput" id="inside_img" src="">
+                <img style="display: none;">
+                <p>画像を選択してください</p>
               </div>
             </td>
           </tr>
-
         </tbody>
       </table>
       <div class="text-end mt-4">
@@ -162,94 +175,54 @@
   </main>
 
   <br>
+  <script type="text/javascript">
+    const appearance_img_id = 'appearance_img';
+    const inside_img_id = 'inside_img';
+    const fileInput_id_1 = 'fileInput1';
+    const fileInput_id_2 = 'fileInput2';
+    function inputChange(event, target) {
+      const reader = new FileReader();
+      const targetID = target == 1 ? appearance_img_id : inside_img_id;
+      const targetFile = event.target.files[0];
+      if (targetFile == null) {
+        const parent = document.getElementById(targetID);
+        const inputImg = parent.getElementsByTagName('img')[0];
+        inputImg.src = '';
+        inputImg.style.display = 'none';
+        parent.getElementsByTagName('p')[0].style.display = null;
+      }
+      else {
+        reader.onload = function (evnet) {
+          const parent = document.getElementById(targetID);
+          const inputImg = parent.getElementsByTagName('img')[0];
+          inputImg.src = reader.result;
+          inputImg.style.display = null;
+          parent.getElementsByTagName('p')[0].style.display = 'none';
+        }
+        reader.readAsDataURL(targetFile);
+      }
+    }
+    function inputCancel(target) {
+      document.getElementById(target == 1 ? fileInput_id_1 : fileInput_id_2).value = '';
+      const parent = document.getElementById(target == 1 ? appearance_img_id : inside_img_id);
+      const inputImg = parent.getElementsByTagName('img')[0];
+      inputImg.src = '';
+      inputImg.style.display = 'none';
+      parent.getElementsByTagName('p')[0].style.display = null;
+    }
+    window.onload = function () {
+      inputCancel(1);
+      inputCancel(2);
+    }
+  </script>
+
+  <br>
   <footer class="border-top footer text-center">
 
     <div class="container">
-
       ©こぴーらいと
-
     </div>
-
   </footer>
-
-  <script>
-
-    /* 複数選択
-    var cnt = 0;
-    var tmpId = 'tmp-' + cnt;
-
-    function loop(event, id) {
-      for (let file of event.target.files) {
-        imgPreView(file, id);
-      }
-      tmpId = 'tmp-' + ++cnt;
-    }
-
-    function imgPreView(file, id) {
-      let preview = document.getElementById("preview-" + id);
-      let previewImages = document.getElementsByClassName(tmpId);
-      let reader = new FileReader();
-
-      if (previewImages != null) {
-        for (let img of previewImages) {
-          preview.removeChild(img);
-        }
-      }
-
-      reader.onload = function (event) {
-        var img = document.createElement("img");
-        img.setAttribute("src", reader.result);
-        img.setAttribute("id", "previewImage-" + id);
-        img.setAttribute("class", tmpId);
-        preview.appendChild(img);
-      };
-
-      reader.readAsDataURL(file);
-    }
-
-    */
-
-
-    function imgUpload1(event) {
-      var file = event.target.files[0];
-      var reader = new FileReader();
-      var preview = document.getElementById("preview1");
-      var previewImage = document.getElementById("previewImage");
-
-      if (previewImage != null) {
-        preview.removeChild(previewImage);
-      }
-      reader.onload = function (event) {
-        var img = document.createElement('img');
-        img.setAttribute("src", reader.result);
-        img.setAttribute("id", "previewImage");
-        preview.appendChild(img);
-      };
-
-      reader.readAsDataURL(file);
-    }
-
-
-    function imgUpload2(event) {
-      var file = event.target.files[0];
-      var reader = new FileReader();
-      var preview = document.getElementById("preview2");
-      var previewImage = document.getElementById("previewImage");
-
-      if (previewImage != null) {
-        preview.removeChild(previewImage);
-      }
-      reader.onload = function (event) {
-        var img = document.createElement('img');
-        img.setAttribute("src", reader.result);
-        img.setAttribute("id", "previewImage");
-        preview.appendChild(img);
-      };
-
-      reader.readAsDataURL(file);
-    }
-
-  </script>
 </body>
 
 </html>

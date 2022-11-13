@@ -62,53 +62,68 @@
 
     <div>
         <div class="container">
-            <h4 class="text-center mt-5 mb-3">申込者詳細</h4>
-            <form method="post" action="contributor.html">
+            <h4 class="text-center mt-5 mb-3">寄付申込者詳細</h4>
+            <form method="post">
                 <table class="table table-striped table-bordered border-dark">
                     <tbody class="font-size align-middle">
                         <tr scope="row">
+                            <th style="width: 20%;">申し込み番号</th>
+                            <td>3</td>
+                        </tr>
+                        <tr scope="row">
                             <th style="width: 20%;">児童氏名</th>
-                            <td>金谷</td>
+                            <td>福島&emsp;二郎</td>
                         </tr>
                         <tr scope="row">
                             <th>保護者氏名</th>
-                            <td>金谷健人</td>
+                            <td>福島&emsp;太郎</td>
                         </tr>
                         <tr scope="row">
                             <th>郵便番号</th>
-                            <td>123-4567</td>
+                            <td>960-8601</td>
                         </tr>
                         <tr scope="row">
                             <th>住所</th>
-                            <td>福島県郡山市方八町2-4-15</td>
+                            <td>福島県福島市五老内町3-1</td>
                         </tr>
                         <tr scope="row">
                             <th>電話番号</th>
-                            <td>0120-828-828</td>
+                            <td>024-535-1111</td>
                         </tr>
                         <tr scope="row">
                             <th>メールアドレス</th>
-                            <td>test@gmail.com</td>
+                            <td>fukushima.taro@gmail.com</td>
                         </tr>
                         <tr scope="row">
                             <th>寄付申し込み日</th>
                             <td>2022/11/02</td>
                         </tr>
+                        <tr scope="row">
+                            <th>算数ランド外見の写真</th>
+                            <td><img src="算数ランド_外見.jpg" style="width: 40%;"></td>
+                        </tr>
+                        <tr scope="row">
+                            <th>算数ランドの中身の写真</th>
+                            <td><img src="算数ランド_中身.jpg" style="width: 40%;"></td>
+                        </tr>
                     </tbody>
                 </table>
 
                 <div class="d-flex justify-content-end">
-                    <input type="submit" value="受け取る" class="font-size btn btn-dark">
+                    <input type="button" value="受け取る" name="receive" class="font-size btn btn-dark"
+                        onclick="if(confirm('本当に受け取りますか？')){ location.href='contributor.html'}">
                 </div>
 
                 <div class="d-flex justify-content-center btn-list">
-                    <a href="applicant.html"><input type="button" value="申込者一覧へ戻る" class="font-size btn btn-dark"></a>
+                    <a href="applicant.html"><input type="button" value="申込者一覧へ戻る"
+                            class="font-size btn btn-dark mb-5"></a>
                 </div>
             </form>
         </div>
-
-        <script src="js/bootstrap.bundle.min.js"></script>
     </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

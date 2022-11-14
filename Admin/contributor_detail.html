@@ -102,11 +102,33 @@
                     </tr>
                 </tbody>
             </table>
+
+            <div class="text-end">
+                <form method="post" action="stock.html" onsubmit="return stock_add();">
+                    <input type="submit" value="在庫登録する" class="btn btn-primary" id="stock_add_btn">
+                </form>
+            </div>
+
         </div>
 
         <div class="d-flex justify-content-center">
             <a href="contributor.html"><input type="button" value="寄付者一覧へ戻る" class="font-size btn btn-dark mb-5"></a>
         </div>
+
+        <script>
+            function stock_add() {
+                if (confirm('本当に在庫登録しますか？')) {
+                    return true;
+                } else {
+                    return false;
+                }
+
+                /*
+                const btn = document.getElementById('stock_add_btn');
+                btn.disabled = 'disabled';
+                */
+            }
+        </script>
 
         <script src="js/bootstrap.bundle.min.js"></script>
     </div>
